@@ -33,7 +33,7 @@
 
           # When updating go.mod or go.sum, a new sha will need to be calculated,
           # update this if you have a mismatch after doing a change to thos files.
-          vendorSha256 = "sha256-Cq0WipTQ+kGcvnfP0kjyvjyonl2OC9W7Tj0MCuB1lDU=";
+          vendorSha256 = "sha256-SuKT+b8g6xEK15ry2IAmpS/vwDG+zJqK9nfsWpHNXuU=";
 
           ldflags = ["-s" "-w" "-X github.com/juanfont/headscale/cmd/headscale/cli.Version=v${version}"];
         };
@@ -109,6 +109,7 @@
           golangci-lint
           golines
           nodePackages.prettier
+          goreleaser
 
           # Protobuf dependencies
           protobuf
@@ -146,14 +147,13 @@
         inherit headscale;
         inherit headscale-docker;
       };
-
       defaultPackage = pkgs.headscale;
 
       # `nix run`
       apps.headscale = flake-utils.lib.mkApp {
         drv = packages.headscale;
       };
-      defaultApp = apps.headscale;
+      apps.default = apps.headscale;
 
       checks = {
         format =
