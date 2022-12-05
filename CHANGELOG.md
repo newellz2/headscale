@@ -4,6 +4,7 @@
 
 ### Changes
 
+- Added an OIDC AllowGroups Configuration options and authorization check [#1041](https://github.com/juanfont/headscale/pull/1041)
 - Correct typo on macOS standalone profile link [#1028](https://github.com/juanfont/headscale/pull/1028)
 
 ## 0.17.0 (2022-11-26)
