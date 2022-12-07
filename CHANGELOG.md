@@ -10,6 +10,7 @@
 
 ### Changes
 
+- Added an OIDC AllowGroups Configuration options and authorization check [#1041](https://github.com/juanfont/headscale/pull/1041)
 - Correct typo on macOS standalone profile link [#1028](https://github.com/juanfont/headscale/pull/1028)
 - Update platform docs with Fast User Switching [#1016](https://github.com/juanfont/headscale/pull/1016)
 
